@@ -5,13 +5,17 @@ using UnityEngine.UI;
 public class StoryText : MonoBehaviour {
 
 	Text adventuretext;
+	public AudioClip writingSound;
+	AudioSource audioSource;
 	string textToprint;
 	int storyLenght = 4;
 	int numberofText = 0;
+	bool stopPrinting = false;
 	public bool lost = false;
 
 	private void Awake() {
 		adventuretext = GetComponent<Text>();
+		audioSource = GetComponent<AudioSource>();
 		StartCoroutine(textController());
 	}
 
@@ -30,8 +34,11 @@ public class StoryText : MonoBehaviour {
 
 	IEnumerator printText() {
 		for (int i = 0; i <= textToprint.Length; i++) {
-			adventuretext.text = textToprint.Substring(0, i);
-			yield return new WaitForSeconds(0.01F);
+			if (!stopPrinting) {
+				adventuretext.text = textToprint.Substring(0, i);
+				audioSource.PlayOneShot(writingSound, 0.35f);
+				yield return new WaitForSeconds(0.05F);
+			}
 		}
 		if (numberofText < storyLenght) {
 			numberofText++;
@@ -41,7 +48,7 @@ public class StoryText : MonoBehaviour {
 		else {
 			yield return new WaitForSeconds(4.0f);
 			StartCoroutine(printdecisionText());
-			yield return new WaitForSeconds(10.0f);
+			yield return new WaitForSeconds(13.0f);
 			GameObject.Find("Choice 1").GetComponent<Choice>().enabled = true;
 			GameObject.Find("Choice 2").GetComponent<Choice>().enabled = true;
 		}
@@ -50,10 +57,11 @@ public class StoryText : MonoBehaviour {
 
 	IEnumerator printdecisionText() {
 		adventuretext.text = "";
-		yield return new WaitForSeconds(5.0f);
+		yield return new WaitForSeconds(4.0f);
 		textToprint = "You’re inside your room. The sun is shinning outside like it never did. The doors at the left and the right are open. What do you do?";
 		StartCoroutine(printText());
-		yield return new WaitForSeconds(2.0f);
+		yield return new WaitForSeconds(12.0f);
+		stopPrinting = true;
 		GetComponent<StaticStoryText>().enabled = true;
 		GetComponent<StoryText>().enabled = false;
 	}
