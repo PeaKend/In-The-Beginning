@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public GameObject PlayerWeapon;
 	Rigidbody2D playerrigidBody;
 	float maxhorizontalVelocity = 5.0f;
 	float jumpForce = 10.0f;

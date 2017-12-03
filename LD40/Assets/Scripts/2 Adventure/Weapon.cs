@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 
 	bool iswithPlayer = false;
+	bool doorOpened = false;
 	public GameObject playerGameobject;
 	void Start () {
 		
@@ -12,12 +13,15 @@ public class Weapon : MonoBehaviour {
 	
 	void Update () {
 		if (iswithPlayer) {
-			transform.position = playerGameobject.transform.position;
+			transform.position = new Vector2 (playerGameobject.transform.position.x + 0.5f, playerGameobject.transform.position.y);
+			if (!doorOpened) {
+				doorOpened = true;
+				GameObject.Find("CastleDoor").GetComponent<CastleDoor>().OpenDoor();
+			}
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("asd");
 		if (other.gameObject.tag == "Enemy") {
 			other.GetComponent<Enemy>().enemyDie();
 		}

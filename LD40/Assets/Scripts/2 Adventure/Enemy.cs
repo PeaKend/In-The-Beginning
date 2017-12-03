@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public GameObject PlayerGameobject;
+	GameObject PlayerGameobject;
 	public bool dead = false;
 	float movementSpeed = 0.1f;
 
-	void Start () {
-
+	private void Awake() {
+		PlayerGameobject = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	void FixedUpdate () {
 		if (!dead) {
 			transform.position = Vector2.MoveTowards(transform.position, PlayerGameobject.transform.position, movementSpeed);
-		} else {
-			Debug.Log("dead");
 		}
 	}
 
 	public void enemyDie() {
+		Destroy(gameObject.GetComponent<Collider2D>());
 		dead = true;
+	}
+
+	private void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Player") {
+			other.gameObject.GetComponent<PlayerMovement>().playerDie();
+		}
 	}
 }
