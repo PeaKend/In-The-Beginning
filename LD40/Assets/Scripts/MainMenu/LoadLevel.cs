@@ -29,7 +29,7 @@ public class LoadLevel : MonoBehaviour {
 			audioSource.PlayOneShot(ReadyAudioClip, 0.5f);
 			levelLoading = true;
 			yield return new WaitForSeconds(3.0f);
-			SceneManager.LoadScene("1 TextStory");
+			SceneManager.LoadScene("1 StoryScene");
 		}
 	}
 }

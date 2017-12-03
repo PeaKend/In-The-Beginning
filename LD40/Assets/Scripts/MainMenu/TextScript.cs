@@ -37,6 +37,7 @@ public class TextScript : MonoBehaviour {
 
 	void checkKeys() {
 		if(Input.anyKeyDown) {
+			Destroy(GameObject.Find("MadeBy").gameObject);
 			gameObject.GetComponent<LoadLevel>().PlayerReady = true;
 			Destroy(this);
 		}
