@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-	float bulletVelocity = 0.2f;
+	public bool ShootLeft;
+	public bool ShootRight;
+	float bulletVelocity = 0.5f;
 
 	void Start () {
 		
 	}
 	
 	void FixedUpdate () {
-		transform.position += Vector3.right * bulletVelocity;
+		if (ShootRight) {
+			transform.position += Vector3.right * bulletVelocity;
+		}
+		if (ShootLeft) {
+			transform.position += Vector3.left * bulletVelocity;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {

@@ -5,11 +5,14 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
 	GameObject PlayerGameobject;
+	AudioSource audioSource;
+	public AudioClip DieAudio;
 	public bool dead = false;
 	float movementSpeed = 0.1f;
 
 	private void Awake() {
 		PlayerGameobject = GameObject.FindGameObjectWithTag("Player");
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	void FixedUpdate () {
@@ -20,6 +23,7 @@ public class Enemy : MonoBehaviour {
 
 	public void enemyDie() {
 		Destroy(gameObject.GetComponent<Collider2D>());
+		audioSource.PlayOneShot(DieAudio, 0.3f);
 		dead = true;
 	}
 

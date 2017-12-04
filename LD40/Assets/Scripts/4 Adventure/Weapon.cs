@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour {
 	
 	void Update () {
 		if (iswithPlayer) {
-			transform.position = new Vector2 (playerGameobject.transform.position.x + 0.5f, playerGameobject.transform.position.y);
+			transform.position = new Vector3 (playerGameobject.transform.position.x + 0.5f, playerGameobject.transform.position.y, -17.0f);
 			if (!doorOpened) {
 				doorOpened = true;
 				GameObject.Find("CastleDoor").GetComponent<CastleDoor>().OpenDoor();

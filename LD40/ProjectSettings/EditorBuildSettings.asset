@@ -14,3 +14,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2 TextStory.unity
     guid: 5342120f6aa13eb48bd8bfd13fb8b664
+  - enabled: 1
+    path: Assets/Scenes/3 StoryScene.unity
+    guid: 274ec36d782ddb84bb338c40324b0780
+  - enabled: 1
+    path: Assets/Scenes/4 Adventure.unity
+    guid: 422a1bb5b0f725e45852e07d0266318e
+  - enabled: 1
+    path: Assets/Scenes/5 StoryScene.unity
+    guid: f43dfa345f3d9b740a31497e14f7821f
+  - enabled: 1
+    path: Assets/Scenes/6 Contra.unity
+    guid: e5cdba930ef3eac49b132b9ab3b6e358
+  - enabled: 1
+    path: Assets/Scenes/7 StoryScene.unity
+    guid: ca4018d0f22786841925f2f2c09e9265
+  - enabled: 1
+    path: Assets/Scenes/8 CoD.unity
+    guid: fd77c1f50a54a204981b8db807132521
+  - enabled: 1
+    path: Assets/Scenes/9 Ending.unity
+    guid: 941f9fb5b75fc9a4c9b9e7cdf8610aa7

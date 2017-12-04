@@ -10,7 +10,7 @@ public class TextScript : MonoBehaviour {
 
 	private void Awake() {
 		currentText = gameObject.GetComponent<Text>();
-		currentText.text = "Press Any Key To Continue";
+		currentText.text = "IN THE BEGINNING...\n\n\nPress Any Key To Continue";
 		startshowpressanykeyCoroutine();
 	}
 
@@ -25,11 +25,11 @@ public class TextScript : MonoBehaviour {
 	IEnumerator showpressanyKey () {
 		yield return new WaitForSeconds(1.0f);
 		if (iteration == 1) {
-			currentText.text = "Press Any Key To Continu_";
+			currentText.text = "IN THE BEGINNING...\n\n\nPress Any Key To Continu_";
 			iteration = 2;
 		}
 		else {
-			currentText.text = "Press Any Key To Continue";
+			currentText.text = "IN THE BEGINNING...\n\n\nPress Any Key To Continue";
 			iteration = 1;
 		}
 		startshowpressanykeyCoroutine();

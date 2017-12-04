@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 	public AudioClip movementSound;
 	AudioSource audioSource;
 	public GameObject Camera2;
+	public GameObject Camera3;
 	bool soundbeingPlayed = false;
 	float movementSpeed = 0.1f;
 	
@@ -37,6 +38,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	public void playerDie () {
+		Instantiate(Camera3);
+		Destroy(Camera2);
+		GameObject.Find("EndGameWall").GetComponent<EndGameEffect>().startendgameEffect();
 		Destroy(gameObject);
 	} 
 

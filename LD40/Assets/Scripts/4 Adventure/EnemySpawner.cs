@@ -47,7 +47,6 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	IEnumerator spawn() {
-		Debug.Log("spawn");
 		Instantiate(Enemy, transform.position, Quaternion.identity);
 		yield return new WaitForSeconds (Random.Range(1.0f, 3.0f));
 		StartCoroutine(spawn());

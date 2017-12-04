@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Lose : MonoBehaviour {
 
@@ -59,6 +60,8 @@ public class Lose : MonoBehaviour {
 	IEnumerator endLevel() {
 		yield return new WaitForSeconds(5.0f);
 		adventuretext.text = "";
+		yield return new WaitForSeconds(2.0f);
+		SceneManager.LoadScene("3 StoryScene");
 	}
 
 }
