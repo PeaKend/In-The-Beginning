@@ -164,7 +164,7 @@ MonoBehaviour:
   FadeWhenTextEnds: 0
   TimeBeforeFadeOut: 2
   WaitToBegin: 2
-  NextLevel: 4 Adventure
+  NextLevel: 6 Contra
   textoftheStory:
   - Lost already?
   - With the new generation of home consoles we were able to play games at home!
