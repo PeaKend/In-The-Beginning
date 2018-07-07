@@ -2,13 +2,13 @@
 
 ![Image of In The Beginning main menu...](https://img.itch.zone/aW1hZ2UvMjAxMDYzLzkzOTQ4Ny5wbmc=/315x250%23c/0zGmhA.png)
 
-A game about games.
+> A game about games.
 
 ![Screenshot of In The Beginning... 1](https://img.itch.zone/aW1hZ2UvMjAxMDYzLzkzOTU0NC5wbmc=/347x500/cDFlu2.png)
 
 ![Screenshot of In The Beginning... 2](https://img.itch.zone/aW1hZ2UvMjAxMDYzLzkzOTU0NS5wbmc=/347x500/KMrz%2FW.png)
 
-Did you asked yourself why games costs so much money to make? This game tries to explain that. Kind of.
+> Did you asked yourself why games costs so much money to make? This game tries to explain that. Kind of.
 
 ## itch.io Page
 
