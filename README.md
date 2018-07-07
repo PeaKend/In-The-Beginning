@@ -18,6 +18,10 @@ https://peakend.itch.io/in-the-beginning
 
 https://www.youtube.com/watch?v=zTwDZcNlXN8
 
+## Gource Video:
+
+https://www.youtube.com/watch?v=lftclcBQ0g8
+
 ## Authors
 
 - Facundo Julian Atrio
